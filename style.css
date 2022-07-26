@@ -1,0 +1,164 @@
+:root {
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+
+  --clr-main-bg: hsl(217, 54%, 11%);
+  --clr-card-bg: hsl(216, 50%, 16%);
+  --clr-line: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff: 'Outfit', sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--clr-main-bg);
+  color: var(--clr-soft-blue);
+  font-family: var(--ff);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.card {
+  background: var(--clr-card-bg);
+  width: 375px;
+  border-radius: 20px;
+  padding: 2rem;
+  padding-bottom: .8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  border-radius: 10px;
+
+}
+
+.card__title {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  margin-bottom: 0;
+
+}
+
+.card__text {
+  font-weight: var(--fw-300);
+}
+
+.card__flex {
+  display: flex;
+}
+
+.card__nft,
+.card__days-left {
+  width: 90px;
+}
+
+.card__nft {
+  color: var(--clr-cyan);
+  font-weight: var(--fw-400);
+}
+
+.card .card__between {
+  justify-content: space-between;
+}
+
+.card__crypto>span {
+  color: var(--clr-cyan);
+}
+
+.card__creator {
+  width: 35px;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+.card__crypto>img,
+.card__days>img {
+  margin-right: .5rem;
+}
+
+.card__crypto {
+  display: flex;
+}
+
+.card__creator-con {
+  border-top: 1px solid var(--clr-line);
+}
+
+.card__creator-con>img {
+  margin-right: 1rem;
+}
+
+.card__creator-text {
+  font-weight: var(--fw-300);
+}
+
+.card__creator-name {
+  font-weight: var(--fw-400);
+  color: var(--clr-white);
+}
+
+.card__creator-name:hover,
+.card__title:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+
+}
+
+.card__img {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  background: hsla(178, 100%, 50%, 0.507);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98.1%;
+  transition: opacity 0.4 ease-in-out;
+}
+
+.container:hover {
+  opacity: 0.8;
+  animation: ease-in;
+}
+
+.overlay:hover {
+  opacity: 100;
+}
+
+.card__crypto,
+.card__days {
+  align-items: center;
+  margin-bottom: 1rem;
+}
